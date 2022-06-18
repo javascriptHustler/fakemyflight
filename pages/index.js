@@ -1,26 +1,42 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import Head from 'next/head';
+import Grid from '@mui/material/Grid';
+import styles from '../styles/Home.module.css';
+import Select from '../components/inputs/Select';
 
 export default function Home() {
   return (
-      <div className={styles.container}>
+      <div>
         <Head>
-          <title>Create Next App</title>
-          <link rel="icon" href="/favicon.ico" />
+          <title>Fake My Flight</title>
         </Head>
-
-        <main className={styles.main}>
-          <h1 className={styles.title}>
-            Welcome to <a href="https://nextjs.org">
-            Next.js!</a> integrated with{" "}
-            <a href="https://mui.com/">Material-UI!</a>
-          </h1>
-          <p className={styles.description}>
-            Get started by editing{" "}
-            <code className={styles.code}>
-              pages/index.js</code>
-          </p>
-
+        <main>
+            <Grid
+                container
+                p={5}
+                style={{borderStyle: 'dashed', borderColor: 'black'}}>
+                <Grid
+                    item
+                    sm={12}>
+                    <h1 className={styles.title}> Fake My Flight </h1>
+                    <p className={styles.description}> Proof of Onward Travel is required by many countries before you even
+                        board an ✈️ airplane. If you'd like to keep your travel options open & travel on one-way tickets,
+                        this hack is perfect for you! Use this for pranks and anything you like, except for real flights.
+                    </p>
+                </Grid>
+                <Grid
+                    item
+                    mt={10}
+                    sm={12}>
+                    <Select
+                        prefix="trip-type"
+                        label="Trip Type"
+                        values={[
+                            'One way',
+                            'Round Trip'
+                        ]}
+                    />
+                </Grid>
+            </Grid>
         </main>
       </div>
   );
