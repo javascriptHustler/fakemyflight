@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Grid from '@mui/material/Grid';
 import styles from '../styles/Home.module.css';
-import Select from '../components/inputs/Select';
+import SelectInput from '../components/inputs/Select';
+import AutoCompleteInput from '../components/inputs/AutoComplete';
 
 export default function Home() {
   return (
@@ -27,13 +28,47 @@ export default function Home() {
                     item
                     mt={10}
                     sm={12}>
-                    <Select
+                    <SelectInput
                         prefix="trip-type"
                         label="Trip Type"
                         values={[
                             'One way',
                             'Round Trip'
                         ]}
+                    />
+                </Grid>
+                <Grid
+                    item
+                    mt={5}
+                    sm={12}>
+                    <SelectInput
+                        width={300}
+                        prefix="Travelers"
+                        label="Travelers"
+                        values={[
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6
+                        ]}
+                    />
+                </Grid>
+                <Grid
+                    item
+                    mt={5}
+                    sm={12}>
+                    <AutoCompleteInput
+                        label="Departing Airport"
+                    />
+                </Grid>
+                <Grid
+                    item
+                    mt={5}
+                    sm={12}>
+                    <AutoCompleteInput
+                        label="Arrival Airport"
                     />
                 </Grid>
             </Grid>

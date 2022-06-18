@@ -4,8 +4,8 @@ import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 
-export default function TripType (props) {
-    const { prefix, label, values } = props;
+export default function SelectInput (props) {
+    const { prefix, label, values, width } = props;
     const [ value, setSelect ] = React.useState(values[0]);
     const handleChange = event => setSelect(event.target.value);
     return (
@@ -16,7 +16,9 @@ export default function TripType (props) {
                 id={`${prefix}-select`}
                 value={value}
                 label={label}
-                onChange={handleChange}>
+                style={{ width: '300px' }}
+                onChange={handleChange}
+                {...(width ? {style: {width: width}} : {})}>
                 {values.map((value, idx) =>
                     <MenuItem key={idx} value={value}>{value}</MenuItem>)}
             </Select>
