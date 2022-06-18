@@ -16,7 +16,6 @@ export default function SelectInput (props) {
                 id={`${prefix}-select`}
                 value={value}
                 label={label}
-                style={{ width: '300px' }}
                 onChange={handleChange}
                 {...(width ? {style: {width: width}} : {})}>
                 {values.map((value, idx) =>

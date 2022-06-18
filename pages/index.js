@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
 import styles from '../styles/Home.module.css';
 import SelectInput from '../components/inputs/Select';
+import DatePicker from '../components/inputs/DatePicker';
 import AutoCompleteInput from '../components/inputs/AutoComplete';
 
 export default function Home() {
@@ -45,14 +47,7 @@ export default function Home() {
                         width={300}
                         prefix="Travelers"
                         label="Travelers"
-                        values={[
-                            1,
-                            2,
-                            3,
-                            4,
-                            5,
-                            6
-                        ]}
+                        values={[ 1, 2, 3, 4, 5, 6 ]}
                     />
                 </Grid>
                 <Grid
@@ -70,6 +65,29 @@ export default function Home() {
                     <AutoCompleteInput
                         label="Arrival Airport"
                     />
+                </Grid>
+                <Grid
+                    item
+                    mt={5}
+                    sm={12}>
+                    <DatePicker
+                        label="Depart Date"
+                    />
+                </Grid>
+                <Grid
+                    item
+                    mt={5}
+                    sm={12}>
+                    <DatePicker
+                        label="Return Date"
+                    />
+                </Grid>
+                <Grid
+                    item
+                    mt={5}>
+                    <Button
+                        size="large"
+                        variant="outlined">Submit</Button>
                 </Grid>
             </Grid>
         </main>
