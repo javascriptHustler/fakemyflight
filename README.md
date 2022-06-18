@@ -4,7 +4,7 @@
 ### NextJS Setup
 
 ```bash
-npx create-next-app fakemylight
+npx create-next-app fakemyflight
 ```
 
 ### Material UI
