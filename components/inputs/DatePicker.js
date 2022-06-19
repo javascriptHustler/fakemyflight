@@ -18,7 +18,6 @@ export default function DatePicker (props) {
 
     return (
         <LocalizationProvider
-            style={{ width: '300px' }}
             dateAdapter={AdapterDateFns}>
             <DesktopDatePicker
                 label={label}

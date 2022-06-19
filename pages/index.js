@@ -28,6 +28,7 @@ export default function Home() {
                 </Grid>
                 <Grid
                     item
+                    container
                     mt={10}
                     sm={12}>
                     <SelectInput
@@ -76,6 +77,7 @@ export default function Home() {
                 </Grid>
                 <Grid
                     item
+                    container
                     mt={5}
                     sm={12}>
                     <DatePicker
