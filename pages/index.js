@@ -32,6 +32,7 @@ export default function Home() {
                     mt={10}
                     sm={12}>
                     <SelectInput
+                        width={300}
                         prefix="trip-type"
                         label="Trip Type"
                         values={[
@@ -42,6 +43,7 @@ export default function Home() {
                 </Grid>
                 <Grid
                     item
+                    container
                     mt={5}
                     sm={12}>
                     <SelectInput
@@ -53,6 +55,7 @@ export default function Home() {
                 </Grid>
                 <Grid
                     item
+                    container
                     mt={5}
                     sm={12}>
                     <AutoCompleteInput
@@ -61,6 +64,7 @@ export default function Home() {
                 </Grid>
                 <Grid
                     item
+                    container
                     mt={5}
                     sm={12}>
                     <AutoCompleteInput
@@ -69,6 +73,7 @@ export default function Home() {
                 </Grid>
                 <Grid
                     item
+                    container
                     mt={5}
                     sm={12}>
                     <DatePicker
@@ -86,6 +91,7 @@ export default function Home() {
                 </Grid>
                 <Grid
                     item
+                    container
                     mt={5}>
                     <Button
                         size="large"

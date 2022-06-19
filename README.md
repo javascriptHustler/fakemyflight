@@ -12,3 +12,9 @@ npx create-next-app fakemyflight
 ```bash
 npm install @mui/material @emotion/react @emotion/styled @emotion/server @emotion/cache --save
 ```
+
+### State management
+
+```bash
+npm install --save immutable redux redux-immutable redux-logger redux-thunk
+```
